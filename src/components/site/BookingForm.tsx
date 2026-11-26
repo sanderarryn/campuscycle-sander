@@ -152,6 +152,9 @@ export function BookingForm(props: BookingFormProps) {
         <input type="hidden" name="requestId" value={requestId} />
 
         <SlotPicker slots={slots} selected={values.timeSlot} error={errors.timeSlot} />
+<Notice>
+          <p>{MADE_UP_DATA_NOTICE}</p>
+        </Notice>
 
         <div className="grid gap-2">
           <Label htmlFor="name">
@@ -198,9 +201,7 @@ export function BookingForm(props: BookingFormProps) {
           <input id="extra" name="extra" type="text" tabIndex={-1} autoComplete="off" defaultValue="" />
         </div>
 
-        <Notice>
-          <p>{MADE_UP_DATA_NOTICE}</p>
-        </Notice>
+       
 
         <BookingSubmitButton />
       </SentValues>
